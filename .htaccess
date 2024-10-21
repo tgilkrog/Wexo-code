@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /Wexo-code/
+    RewriteRule ^movie/([0-9]+)$ index.php?path=movie&id=$1 [L]
+    RewriteRule ^genre/([0-9]+)/?$ index.php?path=genre&id=$1&page=1 [L]
+    RewriteRule ^genre/([0-9]+)/page/([0-9]+)/?$ index.php?path=genre&id=$1&page=$2 [L]
+    RewriteCond %{QUERY_STRING} ^page=([0-9]+)$
+    RewriteRule ^genre/([0-9]+)/?$ index.php?path=genre&id=$1&page=%1 [L]
+    RewriteRule ^ajax/movieajax$ app/ajax/MovieAjax.php [L]
+</IfModule>
