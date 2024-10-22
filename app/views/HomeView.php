@@ -44,7 +44,7 @@
         <?php foreach ($movies as $genre) { ?>
             <div class="movie-collection-section">
                 <!-- Display the genre name dynamically -->
-                <h3><a href="/Wexo-code/genre/<?php echo $genre['genre_id']; ?>"><?php echo $genre['genre_name']; ?> - <?php echo $genre['total_pages']; ?> items</a></h3>
+                <h3><a href="/Wexo-code/genre/<?php echo $genre['genre_id']; ?>"><?php echo $genre['genre_name']; ?></a></h3>
                 <div class="scroll-container">
                     <button class="scroll-arrow left-arrow">&lt;</button>
                     <ul class="movie-collection-list">
